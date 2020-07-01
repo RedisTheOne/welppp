@@ -1,0 +1,125 @@
+<div id="bg"></div>
+
+<div id="market-page">
+   <div id="market-header">
+      <i class="fa fa-chevron-left icon" (click)="goJuth()"></i>
+      <div class="head-text"><div class="giga">GIGA</div> <div class="market">Market</div></div>
+      <i class="fa fa-info-circle icon info" (click)="goInfo()"></i>
+   </div>
+
+   <div id="market-content">
+      <div id="buttons">
+         <div style="padding: 0px;" class="button-container">
+            <div style="padding: 0px;" class="tab-button active" id="butt1"  (click)="changeTab(1)">
+               <i style="padding: 0px;" class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </div>
+            <p style="padding: 0px;">Bli</p>
+         </div>
+         <div style="padding: 0px;" class="button-container">
+            <div style="padding: 0px;" class="tab-button" id="butt2" (click)="changeTab(2)">
+               <i style="padding: 0px;" class="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <p>Shit</p>
+         </div>
+         <div style="padding: 0px;" class="button-container">
+            <div style="padding: 0px;" class="tab-button" id="butt3" (click)="changeTab(3)">
+               <i style="padding: 0px;" class="fa fa-history" aria-hidden="true"></i>
+            </div>
+            <p style="padding: 0px;">Historiku</p>
+         </div>
+         <div style="padding: 0px;" class="button-container">
+            <div style="padding: 0px;" class="tab-button" id="butt4" (click)="changeTab(4)">
+               <i style="padding: 0px;" class="fa fa-users" aria-hidden="true"></i>
+            </div>
+            <p style="padding: 0px;">Tabela</p>
+         </div>
+      </div>
+
+      <div id="bli" *ngIf="tabLocation == 1">
+         <div class="category-head">
+            Kategoritë
+         </div>
+         <div class="category" id="category1" (click)="animate(1)">
+            <p class="mb-text">100 MB</p>
+            <p class="offer-text">108 oferta</p>
+            <i class="fa fa-chevron-right icon"></i>
+         </div>
+         <div class="category" id="category2" (click)="animate(2)">
+            <p class="mb-text">200 MB</p>
+            <p class="offer-text">67 oferta</p>
+            <i class="fa fa-chevron-right icon"></i>
+         </div>
+         <div class="category" id="category3" (click)="animate(3)">
+            <p class="mb-text">500 MB</p>
+            <p class="offer-text">50 oferta</p>
+            <i class="fa fa-chevron-right icon"></i>
+         </div>
+         <div style="border-bottom: 1px solid white" class="category" id="category4" (click)="animate(4)">
+            <p class="mb-text">1 GB</p>
+            <p class="offer-text">140 oferta</p>
+            <i class="fa fa-chevron-right icon"></i>
+         </div>
+      </div>
+      <div id="shit" *ngIf="tabLocation == 2">
+         <div class="category-head">
+            Shit Produkt
+         </div>     
+         <ion-item class="item-bg">
+            <ion-label class="label">Sasia</ion-label>
+            <ion-select placeholder="Zgjidh" cancelText="Kthehu" okText="Zgjidh">
+              <ion-select-option value="100mb">100 MB</ion-select-option>
+              <ion-select-option value="200mb">200 MB</ion-select-option>
+              <ion-select-option value="500mb">500 MB</ion-select-option>
+              <ion-select-option value="1gb">1 GB</ion-select-option>
+            </ion-select>
+         </ion-item>
+         <br>
+         <br>
+         <div class="sub-head">
+            Vendos Çmimin
+         </div>
+         <br>
+         <ion-item class="item-bg">
+            <ion-range class="range" min="50" max="100" color="secondary">
+              <ion-label class="range-label-1" slot="start">50</ion-label>
+              <ion-label class="range-label-2" slot="end">100</ion-label>
+            </ion-range>
+          </ion-item>
+          <br>
+          <br>
+          <button class="sell-button">
+            Shit
+          </button>
+      </div>
+      <div class="table" id="historiku" *ngIf="tabLocation == 3">
+         <div class="header">
+            <h4 style="color: white;">PERDORIMI YT NE GIGAMARKET</h4>
+         </div>
+         <div class="tabs">
+            <div (click)="tabBarClicked('blere')" id="blereTab" class="tab mr activeTab">
+               <p class="tab-text" style="color: white;">BLERE</p>
+            </div>
+            <div (click)="tabBarClicked('shitur')" id="shiturTab" class="tab mr">
+               <p class="tab-text" style="color: white;">SHITUR</p>
+            </div>
+            <div class="tab-text" (click)="tabBarClicked('transferta')" id="transfertaTab" class="tab">
+               <p style="color: white;">TRANSFERTA</p>
+            </div>
+         </div>
+         <div class="body"></div>
+      </div>
+      <div id="tabelat" class="table" *ngIf="tabLocation == 4">
+         <div *ngFor="let score of leaderboardScores" class="score">
+            <div class="right">
+               <img src="../../../assets/ranks/{{score.rank.toLowerCase()}}badge.png" alt="">
+               <h5 style="color: white;">{{score.user}}</h5>
+            </div>
+            <h5 style="margin-right: 5px; color: white;">{{score.score}}</h5>
+         </div>
+         <button class="friend-button" (click)="goFriends()">
+            <i class="fa fa-list-alt" aria-hidden="true"></i>
+         </button>
+      </div>
+   </div>
+</div>
+

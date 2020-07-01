@@ -1,0 +1,38 @@
+<div id="bg"></div>
+
+<div *ngIf="existTrue" class="login">
+  <img src="../../assets/login/juthVoda.png" alt="" class="vodaJuth">
+  <div class="styled-input">
+    <input id="usernameInput" (blur)="usernameBlured()" (click)="usernameFocused()" type="text">
+    <label id="usernameLabel" (click)="usernameFocused()">Username</label>
+  </div>
+  <div class="styled-input">
+    <input id="passwordInput" (blur)="passwordBlured()" (click)="passwordFocused()" type="password">
+    <label (click)="passwordFocused()" id="passwordLabel">Password</label>
+  </div>
+  <br>
+  <input type="submit" class="submit-butt" (click)="formSubmited()">
+  <br>
+  <p class="sign-up-text">Don't have an account? <a (click)="toggleExist()">Sign up</a></p>
+</div>
+
+
+<div *ngIf="existTrue == false" class="login">
+  <img src="../../assets/login/juthVoda.png" alt="" class="vodaJuth">
+  <div class="styled-input">
+    <input id="usernameInput" (blur)="usernameBlured()" (click)="usernameFocused()" type="text">
+    <label id="usernameLabel" (click)="usernameFocused()">Username</label>
+  </div>
+  <div class="styled-input">
+    <input id="passwordInput" (blur)="passwordBlured()" (click)="passwordFocused()" type="password">
+    <label (click)="passwordFocused()" id="passwordLabel">Password</label>
+  </div>
+  <div class="styled-input">
+    <input id="emailInput" (blur)="emailBlured()" (click)="emailFocused()" type="email">
+    <label (click)="emailFocused()" id="emailLabel">Email</label>
+  </div>
+  <br>
+  <input type="submit" class="submit-butt" (click)="formSubmited()">
+  <br>
+  <p class="sign-up-text">Already have an account <a (click)="toggleExist()">Sign in</a></p>
+</div>

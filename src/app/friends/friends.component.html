@@ -1,0 +1,62 @@
+<div class="loading" *ngIf="loading">
+    <h1>Loading</h1>
+</div>
+
+<div *ngIf="loading == false">
+    <div (click)="xButtonClicked()" [style.right]="notificationisVisible ? '10px' : '-240px'"  class="notification">
+        <h5>{{notificationBody}}</h5>
+    </div>
+    <div [ngSwitch]="view" class="friends-container">
+        <div class="header">
+            <p (click)="backBtnClicked()"><i style="margin-right: 20px; margin-top: 2px;" class="fa fa-chevron-left icon"></i></p>
+            <p>{{title}}</p>
+        </div>
+        <div *ngSwitchCase="'FRIENDS_LIST'">
+            <div style="padding: 0px;" *ngFor="let friend of friends">
+                <div (click)='deleteFriend(friend.user)' class="friend-card">
+                    <div class="right">
+                        <img src="../../assets/ranks/{{friend.rank.toLowerCase()}}badge.png" alt="">
+                        <p>{{friend.user}}</p>
+                    </div>
+                    <p>{{friend.score}}</p>
+                </div>
+            </div>
+            <h1 *ngIf="friends.length == 0">0 Friends</h1> 
+        </div>
+        <div *ngSwitchCase="'ADD_FRIEND'">
+            <div class="search_bar" style="overflow: hidden;">
+                <input (keyup)="searchInputKeyUp($event)" type="text">
+                <i class="fa fa-search icon"></i>
+            </div>
+            <div style="padding: 0px" *ngFor="let user of usersToShow">
+                <div (click)="userToAddClicked(user.username)" class="friend-card">
+                    <p>{{user.username}}</p>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'FRIEND_REQUESTS'">
+            <div style="padding: 0px" *ngFor="let friendRequest of friendRequests">
+                <div class="friend-card friend-request-card">
+                    <p style="flex: 1">{{friendRequest}}</p>
+                    <div>
+                        <i (click)="acceptRequest(friendRequest)" class="fa fa-check icon" style="padding-right: 10px"></i>
+                        <i (click)="declineRequest(friendRequest)" class="fa fa-times icon"></i>
+                    </div>
+                </div>
+            </div>
+            <h1 *ngIf="friendRequests.length == 0">0 Friend Requests</h1> 
+        </div>
+    </div>
+    
+    <div class="bottom-tabs">
+        <div (click)="friendsListButtonClicked()" class="active hiddenOverflowY" id="friendsList">
+            <i class="fa fa-list-alt icon"></i>
+        </div>
+        <div (click)="addFriendButtonClicked()" id="addFriend" class="hiddenOverflowY">
+            <i class="fa fa-plus-circle icon"></i>
+        </div>
+        <div (click)="friendReqetsButtonClicked()" id="friendRequests" class="hiddenOverflowY">
+            <i class="fa fa-users icon"></i>
+        </div>
+    </div>
+</div>

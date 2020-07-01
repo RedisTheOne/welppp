@@ -1,0 +1,339 @@
+#bg {
+   height: 100%;
+   width: 100%;
+   background: url('../../../assets/home/bg.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: blur(7px);
+ 
+   z-index: -10;
+}
+
+#market-header {
+  background: rgb(75,79,79);
+  background: linear-gradient(0deg, rgba(75,79,79,0.4150035014005602) 0%, rgba(111,110,108,0.29175420168067223) 100%);
+  border-radius: 15px;  
+  font-size: 25px;
+  padding: 10px;
+  padding-top: 25px;
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+
+.head-text {
+  font-size: 20px;
+  margin-left: 3%;
+  margin-top: 2%;
+  display: inline-block;
+}
+
+.giga {
+  font-family: 'target-cool';
+  font-size: 30px;
+  margin: 0;
+
+  float: left;
+}
+
+
+#market-page {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.market {
+  font-family: 'target-normal';
+  margin-left: 8px;
+  margin-top: 13px;
+  display: inline-block;
+}
+
+#market-content {
+  flex: 1 1 auto;
+  background: rgba($color: black, $alpha: 0.85);
+  border-radius: 15px 15px 0px 0px;
+}
+
+.info {
+  float: right;
+  margin-top: 13px;
+  color: black;
+}
+
+#buttons {
+  display: flex;
+  margin-top: 5%;
+}
+
+
+.button-container {
+  flex: 1;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.tab-button {
+  height: 32px;
+  width: 32px;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  transition: .35s background-color;
+}
+
+.active {
+  background: white;
+  color: black !important;
+}
+
+.tab-button i {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.tab-button-active i {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.button-container p {
+  font-size: 13px;
+  margin-top: 5px;
+  font-family: comic-khazi;
+}
+
+#bli {
+  color: white;
+  font-family: comic-khazi;
+}
+
+.category-head {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 5%;
+}
+
+#bli {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.category {
+  width: 100%;
+  height: 20%;
+  border-top: 1px solid white;
+  display: flex;
+  padding: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-family: comic-khazi;
+  display: flex;
+  transition: 0.3s ease-in;
+}
+
+.active-butt {
+  transform: translateX(-20%);
+  background: white;
+  color: black;
+  transition: 0.3s ease-in;
+}
+
+.category i {
+  flex: 0.1;
+  display: flex;
+  margin: auto;
+  font-size: 20px;
+  padding: 3px;
+}
+
+.mb-text {
+  font-size: 17px;
+  flex: 2;
+  display: flex;
+  margin: auto;
+}
+
+.offer-text {
+  font-size: 13px;
+  display: flex;
+  flex: 0.3;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#shit {
+  color: white;
+  font-family: comic-khazi;
+  width: 100%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.sub-head {
+  margin-left: 4%;
+  font-size: 17px;
+}
+
+.item-bg {
+  --background: black;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  border-radius: 10px;
+}
+
+.label {
+  color: white;
+  font-family: comic-khazi;
+  font-size: 17px;
+}
+
+.range-label-1 {
+  color: white;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.range-label-2 {
+  color: white;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.range {
+  transform: scaleX(0.9);
+}
+
+.sell-button {
+  font-family: comic-khazi;
+  font-size: 18px;
+  color: black;
+  background: white;
+  border-radius: 20px;
+  width: 75%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  display: inline-block;
+}
+
+ion-select {
+  font-family: comic-khazi;
+  font-size: 18px;
+  color: white;
+
+  /* Applies to the value and placeholder color */
+  color: lightgray;
+
+  /* Set a different placeholder color */
+  --placeholder-color: white;
+
+  /* Set full opacity on the placeholder */
+  --placeholder-opacity: 1;
+}
+
+// REDUS CODE
+
+.table {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.table .score {
+  display: flex;
+  padding: 10px;
+  width: 90%;
+  margin-left: 5%;
+  border: 1px solid white;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.table .score .right {
+  flex: 1;
+  display: flex;
+}
+
+.table .score .right img {
+  width: 50px;
+  margin-right: 5px;
+}
+
+#historiku .header {
+  background-color: #3e3e3e;
+  width: 90%;
+  padding: 8px;
+  border-radius: 12px;
+  margin-left: 5%;
+  text-align: center;
+  font-family: comic-khazi;
+}
+
+#historiku .header h5 {
+  font-size: 14px;
+  padding: 0px;
+}
+
+#historiku .tabs {
+  margin-top: 20px;
+  padding: 0px;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+}
+
+#historiku .tabs div {
+  padding: 2px;
+  transition: .3s;
+  border-bottom: 2px solid;
+  border-bottom-color: transparent;
+}
+
+#historiku .tabs .activeTab {
+  border-bottom-color: white;
+}
+
+#historiku .tabs .mr {
+  margin-right: 8px;
+}
+
+#historiku .body {
+  width: 90%;
+  margin-top: 20px;
+  height: 100px;
+  margin-left: 5%;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.tab-text {
+  font-size: 15px;
+  font-family: comic-khazi;
+}
+
+.friend-button {
+  height: 55px;
+  width: 55px;
+  position: fixed;
+  font-size: 25px;
+  color: black;
+  background: white;
+  bottom: 2%;
+  right: 6%;
+  border-radius: 50%;
+  position: fixed;
+}
